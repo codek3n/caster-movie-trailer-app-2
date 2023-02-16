@@ -75,7 +75,8 @@
 
     .loading {
       @include loading;
-      margin-top: 10rem !important;
+      margin-top: 15rem !important;
+      margin-bottom: 50rem !important;
     }
   }
 }

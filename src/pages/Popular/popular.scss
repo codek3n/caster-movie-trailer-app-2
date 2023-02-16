@@ -42,7 +42,7 @@
 
 @media (max-width:800px) {
   .popular-movies--d2 {
-    
+
     &__grid {
       gap: 0.8rem;
     }
@@ -76,7 +76,9 @@
     }
 
     .loading {
-      margin-top: 10rem;
+      margin-top: 15rem !important;
+      margin-bottom: 50rem !important;
+
     }
   }
 }
