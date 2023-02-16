@@ -256,7 +256,7 @@
     }
 
     .snap__inline>* {
-      scroll-snap-align: center;
+      scroll-snap-align: center !important;
     }
 
   }
