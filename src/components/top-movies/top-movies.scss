@@ -1,0 +1,171 @@
+@import '../../sass/index.scss';
+
+.top-movies {
+  position: absolute;
+  margin-top: -29.5rem;
+  right: 0;
+  z-index: 100;
+
+
+
+  &__grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 20.5%;
+    gap: 2%;
+    max-width: 55.3125rem;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+
+  &__header {
+    @include movie__header--2
+  }
+
+  &__card {
+
+    &__poster {
+      width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      @include movie__title--1;
+
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: -7rem;
+    margin-left: -3rem;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: transparent;
+      border: none;
+
+      cursor: pointer;
+      padding: .5rem;
+
+      transition: 0.2s ease-in-out;
+
+      img {
+        width: 5rem;
+        height: auto;
+      }
+    }
+
+    .btn__next {
+      padding-left: 3rem;
+      rotate: 180deg;
+    }
+
+    .btn__hidden {
+      opacity: 0;
+    }
+
+  }
+
+  ::-webkit-scrollbar  {
+    display: none;
+  }
+
+  .snap__inline {
+    scroll-snap-type: inline mandatory;
+  }
+
+  .snap__inline>* {
+    scroll-snap-align: start;
+  }
+
+}
+
+@media (max-width: 1366px) {
+  .top-movies {
+    margin-top: -27.9rem;
+    // border: 1px solid red;
+
+    &__grid {
+      grid-auto-columns: 27%;
+      max-width: 40rem;
+
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-movies {
+    margin-top: -20rem;
+    position: relative;
+
+    // border: 1px solid green;
+
+
+
+    &__grid {
+      grid-auto-columns: 15%;
+      padding-inline: 2rem;
+      gap: 1.5%;
+
+      max-width: 100%;
+      // border: 1px solid blue;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+
+    .snap__inline>* {
+      scroll-snap-align: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .top-movies {
+
+
+    &__grid {
+      grid-auto-columns: 15%;
+    }
+
+    &__card {
+
+      &__title {
+        font-size: 0.8rem;
+      }
+    }
+
+  }
+}
+
+// @media (max-width: 375px) {
+@media (max-width: 500px) {
+  .top-movies {
+    margin-top: -5rem;
+    position: relative;
+
+
+    &__grid {
+      grid-auto-columns: 40%;
+      padding-inline: 4%;
+      gap: 4%;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    .snap__inline>* {
+      scroll-snap-align: center;
+    }
+  }
+}

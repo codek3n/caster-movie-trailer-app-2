@@ -1,0 +1,114 @@
+@import '../../sass/index.scss';
+
+.search-form___container {
+  display: flex;
+  width: 100%;
+  margin-inline: auto;
+
+  // border: 1px solid red;
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    margin-inline: auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    padding-right: 0.8rem;
+    height: 2.1rem;
+
+    input {
+      flex: 1;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 1rem;
+      scale: 0.85;
+      margin-left: -0.5rem;
+      width: 100%;
+
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 300;
+    }
+
+    // input::-webkit-search-cancel-button {
+    //   font-size: 5rem;
+    // }
+
+  }
+
+
+  .search-form__search__btn {
+    display: none;
+    align-items: center;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: $color_white;
+    border: none;
+  }
+
+  .search__btn--mobile {
+    display: none;
+  }
+
+  .back-btn--mobile {
+    background-color: transparent;
+    border: none;
+    // border: 1px solid red;
+    color: $color_white;
+    font-size: 1.5rem;
+    align-self: center;
+    margin-left: -0.8rem;
+    padding-right: 0.9rem;
+    padding-block: 0.3rem;
+    display: none;
+  }
+
+  .search-form__clear__btn {
+    display: none;
+    // align-items: center;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: $color_white;
+    border: none;
+  }
+
+  .clear__btn--active {
+    display: flex;
+  }
+
+  .search__btn--active {
+    display: flex;
+  }
+
+}
+
+// @media (max-width: 375px) {
+@media (max-width: 500px) {
+  .search-form___container {
+
+    .search__btn--mobile {
+      display: flex;
+      justify-content: flex-end;
+      height: 2.1rem;
+      // border: 1px solid red;
+      // width: 100%;
+      margin-left: 90%;
+      // display: none;
+      cursor: pointer;
+      transition: 2s ease-in-out;
+    }
+
+    .back-btn--mobile {
+      display: flex;
+      transition: 2s ease-in-out;
+    }
+
+  }
+}

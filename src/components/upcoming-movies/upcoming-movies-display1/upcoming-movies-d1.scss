@@ -1,0 +1,117 @@
+@import '../../../sass/index.scss';
+
+.upcoming-movies--d1 {
+  background-color: $color_dark-blue;
+
+  margin-block: 15rem;
+  padding-block: 9rem;
+
+  &__grid {
+    max-width: 102.5rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.4375rem;
+
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    max-width: 102.5rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+
+    .header__title {
+      @include movie__header--1;
+      padding-inline: 0;
+
+      flex: 1;
+    }
+
+  }
+
+  .header__btn--see-all {
+    @include btn__see-all;
+
+    padding: .2rem 1rem;
+    margin-right: 45.5%;
+  }
+
+  .btn__mobile {
+    display: none;
+  }
+
+  &__card {
+
+    .card__poster {
+
+      width: 100%;
+      height: auto;
+    }
+
+    .card__title {
+      @include movie__title--2;
+    }
+  }
+}
+
+@media (max-width:1024px) {
+  .upcoming-movies--d1 {
+    margin-block: 12rem;
+  }
+}
+
+@media (max-width:800px) {
+  .upcoming-movies--d1 {
+
+    &__grid {
+      gap: 0.8rem;
+    }
+
+    &__card {
+      
+      .card__title {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// @media (max-width:375px) {
+@media (max-width:500px) {
+  .upcoming-movies--d1 {
+    margin-block: 0;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    .header__btn--see-all {
+      display: none;
+    }
+
+    .btn__mobile {
+      display: flex;
+      margin-inline: auto;
+      margin-top: 3rem;
+      position: relative;
+      z-index: 3;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+
+      .card__title {
+        @include movie__title--1;
+        padding-top: 0;
+        margin-bottom: 0;
+
+      }
+    }
+  }
+}

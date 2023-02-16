@@ -1,0 +1,98 @@
+@import '../../sass/index.scss';
+
+.render-trailer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__container {
+    position: relative;
+    width: 1300px;
+    height: 750px;
+    // border: 1px solid red;
+  }
+
+  // &__container:hover {
+
+  //   .render-trailer__close__btn {
+  //     display: flex;
+  //   }
+  // }
+
+  .youtube-box {
+    position: absolute;
+    // border: 1px solid red;
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+  &__close__btn {
+    position: absolute;
+    z-index: 4000;
+    top: -2rem;
+    right: 0;
+
+    display: none;
+    font-size: 1rem;
+
+    color: $color_white;
+    border: 1px solid $color_pink2;
+    background-color: $color_pink3;
+    border-radius: 100%;
+
+    padding: 0.3rem;
+  }
+
+  .close--active {
+    display: flex;
+  }
+
+  &__close__btn:hover,
+  .close--active:hover {
+    display: flex;
+  }
+}
+
+@media (max-width:1024px) {
+  .render-trailer {
+
+    &__container {
+      margin-inline: 4%;
+      height: 70%;
+
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .render-trailer {
+
+    &__container {
+      height: 41%;
+
+    }
+  }
+}
+
+// @media (max-width:375px) {
+@media (max-width:500px) {
+  .render-trailer {
+
+    &__container {
+      height: 27%;
+    }
+
+  }
+}

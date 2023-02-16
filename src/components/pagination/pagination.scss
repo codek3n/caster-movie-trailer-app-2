@@ -1,0 +1,59 @@
+@import '../../sass/index.scss';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-block: 5rem;
+
+  &__page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--of {
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.829);
+    }
+  }
+
+  &__current-page {
+    border: 1px solid $color_light-blue;
+    padding-inline: 1rem;
+    padding-block: 0.2rem;
+  }
+
+  &__btn--prev,
+  &__btn--next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    border: none;
+    // background-color: pink;
+    background-color: transparent;
+    margin-inline: 1rem;
+    padding: 0.2rem;
+  }
+
+
+
+
+
+  &__icon {
+    color: red;
+    color: $color_white;
+
+    font-size: 2rem;
+    // border: 1px solid green;
+  }
+
+  .prev--icon {
+    rotate: 180deg;
+  }
+
+
+}

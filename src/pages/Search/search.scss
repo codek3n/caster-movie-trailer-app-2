@@ -1,0 +1,83 @@
+@import '../../sass/index.scss';
+
+.search-results {
+  display: flex;
+  margin-block: 10rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+  }
+
+
+  &__grid {
+    max-width: 102.5rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.4375rem;
+  }
+
+  &__card {
+
+    .card__poster {
+
+      width: 100%;
+      height: auto;
+    }
+
+    .card__title {
+      @include movie__title--2
+    }
+  }
+
+  &__loading {
+    @include loading;
+    margin-top: 20rem;
+  }
+
+}
+
+@media (max-width:800px) {
+  .search-results {
+
+    &__grid {
+      gap: 0.8rem;
+    }
+
+    &__card {
+
+      .card__title {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// @media (max-width:375px) {
+@media (max-width:500px) {
+  .search-results {
+    margin-block: 0;
+    padding-top: 6rem;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+
+      .card__title {
+        @include movie__title--1;
+        padding-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &__loading {
+      margin-top: 10rem !important;
+    }
+  }
+}

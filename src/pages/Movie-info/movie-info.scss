@@ -1,0 +1,342 @@
+@import '../../sass/index.scss';
+
+.movie-info {
+  height: 1080px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    max-width: 102.5rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+    width: 100%;
+
+    margin-top: -10rem;
+  }
+
+  &__poster {
+    width: 25rem;
+  }
+
+  &__logo {
+    width: clamp(15rem, 30%, 20rem);
+    height: auto;
+
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 3.125rem;
+  }
+
+  &__details {
+    padding-left: 7rem;
+  }
+
+  .details__date__genre {
+    display: flex;
+    align-items: center;
+
+    // gap: 1rem;
+
+    .details__date {
+      padding-right: 1rem;
+      border-right: 1px dotted rgba(255, 255, 255, 0.4);
+    }
+
+
+  }
+
+  .details__genre {
+    display: flex;
+
+    span {
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 2px;
+      font-size: 2.5rem;
+      padding-inline: 1rem;
+    }
+
+  }
+
+  .details__genre:nth-child(2) {
+
+    padding-left: 1rem;
+
+    span {
+      display: none;
+    }
+  }
+
+  .details__overview {
+    width: clamp(35rem, 60%, 40rem);
+    text-align: justify;
+    font-size: 1rem;
+
+    margin-block: 2rem;
+  }
+
+  .movie-info__trailer__close__btn {
+    color: $color_white;
+    border: none;
+    background-color: transparent;
+    font-size: 2.5rem;
+
+    display: none;
+    margin-top: 2rem;
+
+    opacity: .4;
+
+    padding: .5rem 15rem;
+
+  }
+
+  // .movie-info__trailer__close__btn:hover {
+  //   display: flex;
+  //   opacity: 1;
+  // }
+
+  // .movie-info__trailer__hover__container:hover {
+
+  //   .movie-info__trailer__close__btn {
+  //     display: flex;
+  //   }
+  // }
+
+  &__play-trailer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-size: 0.8rem;
+    font-weight: $font-weight__bold--1;
+    background-color: transparent;
+
+    color: $color_white;
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 50px;
+    padding-block: 0.3rem;
+    width: 8rem;
+
+    border: 1px solid $color_pink3 !important;
+    background-color: rgba(61, 61, 61, 0.2);
+    backdrop-filter: blur(5px);
+
+    .play__icon {
+      color: $color_pink;
+      font-size: 1.6rem;
+    }
+  }
+
+  .movie-info__logo-title__mobile {
+    display: none;
+  }
+
+  .overview__mobile {
+    display: none;
+  }
+
+  .loading {
+    // margin-block: auto;
+    // margin-inline: auto;
+    // scale: 2;
+    // opacity: .5;
+
+    // z-index: 3000;
+
+    @include loading;
+  }
+
+  .play-trailer__mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .movie-info {
+    height: 768px;
+    background-size: 124%;
+    background-position: top;
+
+    &__container {
+      // border: 1px solid red;
+      margin-top: -3rem;
+
+    }
+
+
+    &__poster {
+      width: 15rem;
+    }
+
+    &__details {
+      padding-left: 4rem;
+      // border: 1px solid red;
+    }
+  }
+}
+
+
+// @media (max-width: 375px) {
+@media (max-width: 500px) {
+  .movie-info {
+    // border: 1px solid red;
+    padding-top: 8rem;
+    height: fit-content;
+    background-size: 260%;
+    background-position: top;
+
+
+
+    &__container {
+      margin-top: 0 !important;
+      margin-block: auto !important;
+      flex-direction: column;
+    }
+
+    &__poster {
+      width: 10rem;
+      z-index: 100;
+    }
+
+    &__logo {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 1.1rem;
+      margin-right: auto;
+    }
+
+    &__details {
+      display: none;
+    }
+
+    .details__overview {
+      display: none;
+    }
+
+    .mobile__overview {
+      display: flex;
+    }
+
+    .movie-info__poster-title__container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 100;
+      // position: relative;
+    }
+
+    .movie-info__logo-title__mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .movie-info__logo-title {
+      display: none;
+    }
+
+    .details__date {
+      font-size: .875rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .details__genre__container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .details__genre--mobile {
+        // border: 1px solid red;
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+        padding-inline: 0.3rem;
+        margin-bottom: 0.3rem;
+        border: 1px dotted rgba(255, 255, 255, 0.301);
+      }
+    }
+
+    &__play-trailer {
+      display: none;
+    }
+
+    .play-trailer__mobile {
+      display: flex;
+      flex: 1;
+      margin-top: 2rem;
+
+      font-size: .8rem;
+      align-items: center;
+      justify-content: center;
+      // border: 1px solid rgba(224, 17, 86, 0.5) !important;
+      border-radius: 50px;
+      padding-block: 0.3rem;
+      width: 8rem;
+
+      z-index: 1;
+
+      // border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      border: 1px solid rgba(224, 17, 86, 0.5) !important;
+      background-color: rgba(61, 61, 61, 0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .play__icon {
+      font-size: 1.6rem;
+      // color: white;
+    }
+
+    .overview__mobile {
+      display: unset;
+
+      font-size: .8rem;
+      z-index: 100;
+      width: 100%;
+    }
+
+  }
+
+  .movie-info::after {
+    content: '';
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 26%,
+        rgba(0, 0, 0, 0.1) 40%,
+        rgba(0, 0, 0, 0.9) 65%,
+        rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  // .movie-info::after {
+  //   content: '';
+  //   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,
+  //       rgba(255, 0, 0, 0) 0%,
+  //       rgba(0, 255, 34, 1) 40%,
+  //       rgba(255, 0, 106, 0.9) 65%,
+  //       rgb(65, 255, 246) 90%, rgba(0, 0, 0, 1) 100%);
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  // }
+
+  .loading {
+    margin-top: 40% !important;
+  }
+
+}

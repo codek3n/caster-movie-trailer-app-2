@@ -1,0 +1,16 @@
+@import '../sass/reset';
+
+@import '../sass/config';
+
+@import '../sass/typography';
+
+@import '../sass/buttons';
+
+@mixin loading {
+  margin-block: auto;
+  margin-inline: auto;
+  scale: 2;
+  opacity: 0.5;
+
+  z-index: 3000;
+}

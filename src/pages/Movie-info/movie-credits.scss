@@ -1,0 +1,181 @@
+@import '../../sass/index.scss';
+
+.movie-credits {
+  position: relative;
+  margin-top: -15rem;
+  width: 100%;
+
+  &__header {
+    @include movie__header--1;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cast__grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 11.7%;
+    // gap: 4.3125rem;
+    gap: 2.5%;
+    max-width: 1920px;
+    overflow: hidden;
+    overflow-x: auto;
+
+    margin-inline: auto;
+
+    padding-inline: 2.5%;
+
+  }
+
+  .cast__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 5rem;
+
+    .card__picture {
+      width: 100%;
+      height: auto;
+    }
+
+    .card__name,
+    .card__character {
+      @include movie__title--2;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .card__character {
+      padding-top: 0;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+  }
+
+  ::-webkit-scrollbar {
+    // height: .2rem;
+    display: none;
+  }
+
+  .snap__inline {
+    scroll-snap-type: inline mandatory;
+  }
+
+  .snap__inline>* {
+    scroll-snap-align: center;
+  }
+
+  &__slider__btn {
+    max-width: 1920px;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+
+
+    bottom: 12rem;
+    right: 0;
+    left: 0;
+
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: $color_white;
+      background-color: transparent;
+      border: none;
+
+      padding-inline: 3rem;
+
+      cursor: pointer;
+
+      transition: 0.2s ease-in-out;
+
+      img {
+        width: 5rem;
+        height: auto;
+      }
+
+      // border: 1px solid red;
+
+
+    }
+
+    .btn__next {
+      rotate: 180deg;
+    }
+
+    .btn__hidden {
+      opacity: 0;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .movie-credits {
+    // border: 1px solid green;
+    margin-top: -8rem;
+
+    .cast__grid {
+      grid-auto-columns: 14%;
+    }
+
+    &__slider__btn {
+
+      button {
+        margin-top: -8rem !important;
+        padding-inline: 2rem;
+
+      }
+    }
+  }
+
+
+}
+
+// @media (max-width: 375px) {
+@media (max-width: 500px) {
+  .movie-credits {
+    margin-top: 2rem;
+
+    &__header {
+      @include movie__header--2;
+    }
+
+    .cast__grid {
+
+      grid-auto-columns: 35%;
+      padding-inline: 4%;
+      gap: 4%;
+    }
+
+    &__slider__btn {
+      display: none;
+    }
+
+    .cast__card {
+
+      .card__name,
+      .card__character {
+        @include movie__title--1;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      .card__character {
+        padding-top: 0;
+        font-weight: 400;
+      }
+    }
+
+  }
+}

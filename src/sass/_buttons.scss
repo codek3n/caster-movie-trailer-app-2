@@ -1,0 +1,10 @@
+@mixin btn__see-all {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+
+
+  background-color: transparent;
+  color: $color_white;
+  border: 1.5px solid $color_light-blue;
+  border-radius: 10rem;
+}

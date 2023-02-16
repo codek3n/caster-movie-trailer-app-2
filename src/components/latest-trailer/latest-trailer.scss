@@ -1,0 +1,263 @@
+@import '../../sass/index.scss';
+
+.latest-trailer {
+  position: relative;
+  margin-bottom: 10rem;
+
+  &__header {
+    @include movie__header--1;
+    max-width: 102.5rem;
+    padding-inline: 2rem;
+
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+
+
+  &__big-poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12rem;
+
+    max-width: calc(102.5rem - 4rem);
+    margin-inline: auto;
+
+    height: 900px;
+    width: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .big-poster__title {
+      font-size: 2rem;
+      font-weight: $font-weight__bold--2;
+    }
+
+    .big-poster__btn {
+      display: flex;
+      background-color: transparent;
+      border: none;
+    }
+
+    .big-poster__play__icon {
+
+      font-size: 4.375rem;
+      color: $color_pink;
+    }
+  }
+
+
+  &__carousel {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    bottom: 1rem;
+
+    width: 56.8125rem;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 43%;
+    overflow: hidden;
+    overflow-x: auto;
+
+    gap: 2.6rem;
+  }
+
+  .carousel__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card__poster {
+      width: 100%;
+      height: auto;
+    }
+
+    .card__title {
+      @include movie__title--1;
+      padding-top: 1rem;
+    }
+
+    .card__play-btn {
+      display: flex;
+      position: absolute;
+      top: 29%;
+      color: white;
+
+      background-color: transparent;
+      border: none;
+    }
+
+    .card__play-icon {
+      font-size: 4rem;
+    }
+  }
+
+  .carousel__card:nth-child(1) {
+    display: none;
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__btn {
+    max-width: 62rem;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+
+    z-index: 100;
+
+    bottom: -5rem;
+    right: 0;
+    left: 0;
+
+    margin-bottom: 10rem;
+
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: $color_white;
+      background-color: transparent;
+      border: none;
+
+      padding-inline: 3rem;
+
+      cursor: pointer;
+
+      transition: 0.2s ease-in-out;
+
+      img {
+        width: 5rem;
+        height: auto;
+      }
+
+    }
+
+    .btn__next {
+      rotate: 180deg;
+    }
+
+    // .btn__hidden {
+    //   opacity: 0;
+    // }
+  }
+
+  .snap__inline {
+    scroll-snap-type: inline mandatory;
+  }
+
+  .snap__inline>* {
+    scroll-snap-align: start;
+
+  }
+
+  .latest-trailer__modal__close-btn {
+    color: $color_white;
+    border: none;
+    background-color: transparent;
+    font-size: 2.5rem;
+
+    display: none;
+    margin-top: 2rem;
+
+    opacity: 0.4;
+
+    padding: .5rem 15rem;
+
+  }
+
+
+
+}
+
+@media (max-width: 1024px) {
+  .latest-trailer {
+
+    &__big-poster {
+      height: 800px;
+      background-size: 120%;
+      background-position: top;
+    }
+
+    &__carousel {
+      width: 42rem;
+      grid-auto-columns: 40%;
+      bottom: 4.55rem;
+
+
+      gap: 1.5rem;
+    }
+
+    &__btn {
+      max-width: 48rem;
+      bottom: -1.5rem;
+
+    }
+
+    .snap__inline>* {
+      scroll-snap-align: start !important;
+
+    }
+
+  }
+
+
+}
+
+
+// @media (max-width: 375px) {
+@media (max-width: 500px) {
+  .latest-trailer {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+
+    &__big-poster {
+      display: none;
+    }
+
+    &__carousel {
+      position: unset;
+      grid-auto-columns: 80%;
+      gap: 7%;
+      padding-inline: 2rem;
+
+      width: 100%;
+
+      .carousel__card {
+        position: relative;
+        justify-content: start;
+      }
+
+      .carousel__card:nth-child(1) {
+        display: flex;
+      }
+
+      .card__play-btn {
+        position: absolute;
+        margin-top: -1.5rem;
+      }
+    }
+
+    .mobile__btn__hidden {
+      display: none;
+    }
+
+    .snap__inline>* {
+      scroll-snap-align: center;
+    }
+
+  }
+}
