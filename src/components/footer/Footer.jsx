@@ -58,7 +58,7 @@ const Footer = ({ setPageNumber }) => {
 
         <div className='footer__socials'>
           <p>Contact :</p>
-          <p className='social--email'>msyabut.ken@gmail.com</p>
+          <p className='social--email'>msycodebiz@gmail.com</p>
           <div className='footer__social--icons'>
             <RiFacebookBoxFill />
             <AiFillInstagram />
