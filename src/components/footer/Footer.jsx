@@ -41,7 +41,7 @@ const Footer = ({ setPageNumber }) => {
           </li>
           <li>
             <NavLink to='/popular' onClick={() => setPageNumber(1)}>
-              Popular movies
+              Popular Movies
             </NavLink>
           </li>
           <li>
