@@ -100,18 +100,6 @@
 
   }
 
-  // .movie-info__trailer__close__btn:hover {
-  //   display: flex;
-  //   opacity: 1;
-  // }
-
-  // .movie-info__trailer__hover__container:hover {
-
-  //   .movie-info__trailer__close__btn {
-  //     display: flex;
-  //   }
-  // }
-
   &__play-trailer {
     display: flex;
     align-items: center;
@@ -150,13 +138,6 @@
   }
 
   .loading {
-    // margin-block: auto;
-    // margin-inline: auto;
-    // scale: 2;
-    // opacity: .5;
-
-    // z-index: 3000;
-
     @include loading;
   }
 
@@ -172,7 +153,6 @@
     background-position: top;
 
     &__container {
-      // border: 1px solid red;
       margin-top: -3rem;
 
     }
@@ -184,7 +164,6 @@
 
     &__details {
       padding-left: 4rem;
-      // border: 1px solid red;
     }
   }
 }
@@ -238,7 +217,6 @@
       align-items: center;
       gap: 1rem;
       z-index: 100;
-      // position: relative;
     }
 
     .movie-info__logo-title__mobile {
@@ -262,7 +240,6 @@
       flex-wrap: wrap;
 
       .details__genre--mobile {
-        // border: 1px solid red;
         font-size: 0.75rem;
         margin-right: 0.5rem;
         padding-inline: 0.3rem;
@@ -283,14 +260,12 @@
       font-size: .8rem;
       align-items: center;
       justify-content: center;
-      // border: 1px solid rgba(224, 17, 86, 0.5) !important;
       border-radius: 50px;
       padding-block: 0.3rem;
       width: 8rem;
 
       z-index: 1;
 
-      // border: 1px solid rgba(255, 255, 255, 0.3) !important;
       border: 1px solid rgba(224, 17, 86, 0.5) !important;
       background-color: rgba(61, 61, 61, 0.2);
       backdrop-filter: blur(5px);
@@ -298,7 +273,6 @@
 
     .play__icon {
       font-size: 1.6rem;
-      // color: white;
     }
 
     .overview__mobile {
@@ -323,20 +297,10 @@
     position: absolute;
   }
 
-  // .movie-info::after {
-  //   content: '';
-  //   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,
-  //       rgba(255, 0, 0, 0) 0%,
-  //       rgba(0, 255, 34, 1) 40%,
-  //       rgba(255, 0, 106, 0.9) 65%,
-  //       rgb(65, 255, 246) 90%, rgba(0, 0, 0, 1) 100%);
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  // }
-
   .loading {
-    margin-top: 40% !important;
+    @include loading;
+    margin-top: 15rem !important;
+    margin-bottom: 50rem !important;
   }
 
 }
