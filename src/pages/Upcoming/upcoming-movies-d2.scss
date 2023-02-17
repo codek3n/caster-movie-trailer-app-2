@@ -34,7 +34,7 @@
 
   .loading {
     @include loading;
-    margin-top: 20rem;
+    margin-block: 20rem;
   }
 }
 

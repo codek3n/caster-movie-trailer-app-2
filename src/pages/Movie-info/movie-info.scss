@@ -139,6 +139,7 @@
 
   .loading {
     @include loading;
+    margin-block: 20rem;
   }
 
   .play-trailer__mobile {
