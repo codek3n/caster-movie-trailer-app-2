@@ -4,6 +4,7 @@ import apiConfig from "../../../api/apiConfig";
 import './upcoming-movies-d1.scss';
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import placeHolderPoster from '../../../assets/placeholder_poster.png';
 
 // import { Today } from "../../../utility/Today";
 
@@ -51,7 +52,9 @@ const UpcomingMoviesDisplay1 = ({ getDetails, setPageNumber }) => {
       <div className='upcoming-movies--d1__grid'>
         {upcomingMovies?.map(upcomingMovie => (
           <div className='upcoming-movies--d1__card' key={upcomingMovie.id} onClick={() => getDetails(upcomingMovie)}>
-            <img className='card__poster' src={apiConfig.w500Image(upcomingMovie.poster_path)} alt="movie poster" />
+            {upcomingMovie.poster_path ?
+              <img className='card__poster' src={apiConfig.w500Image(upcomingMovie.poster_path)} alt="movie poster" />
+              : <img src={placeHolderPoster} className='card__poster' alt="" />}
             <h2 className='card__title'>{upcomingMovie.title}</h2>
           </div>
         ))}
