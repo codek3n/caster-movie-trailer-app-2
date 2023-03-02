@@ -20,7 +20,6 @@ const Popular = ({ getDetails, pageNumber, setPageNumber }) => {
   useEffect(() => {
     setPopularMovies(data)
     setTotalPage(100)
-    console.log(data, 'popular')
 
     window.scrollTo({ top: 0 })
   }, [data])

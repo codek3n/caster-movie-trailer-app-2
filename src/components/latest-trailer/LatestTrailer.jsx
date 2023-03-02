@@ -24,7 +24,6 @@ const LatestTrailer = () => {
 
   useEffect(() => {
     setMovieTrailers(data)
-    console.log(data)
   }, [data])
 
 

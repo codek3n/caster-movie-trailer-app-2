@@ -28,7 +28,6 @@ const MovieInfo = ({ getId }) => {
 
   useEffect(() => {
     setMovie(data)
-    console.log(data, 'movie data')
 
     window.scrollTo({ top: 0 });
   }, [data])

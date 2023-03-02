@@ -13,7 +13,6 @@ const RenderLatestTrailer = ({ id, playTrailer, setPlayTrailer, latest }) => {
     setMovie(data)
 
     if (playTrailer) {
-      console.log(data)
     }
   }, [data])
 

@@ -23,7 +23,6 @@ const Hero = ({ getDetails }) => {
 
   useEffect(() => {
     setMovie(data)
-    console.log(data)
   }, [data])
 
   const renderTitle = () => {

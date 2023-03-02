@@ -19,7 +19,6 @@ const PopularMovies = ({ getDetails, setPageNumber }) => {
     })
 
     setPopularMovies(movies)
-    console.log(movies, 'popular display 1')
   }
 
   useEffect(() => {

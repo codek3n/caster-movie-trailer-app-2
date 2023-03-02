@@ -14,7 +14,6 @@ const TrendingMovies = ({ getDetails }) => {
 
   useEffect(() => {
     setTrendingMovies(data)
-    console.log(data, 'trending')
   }, [data])
 
   if (loading) {

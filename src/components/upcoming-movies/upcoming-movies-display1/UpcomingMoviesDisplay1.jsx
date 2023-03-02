@@ -20,7 +20,6 @@ const UpcomingMoviesDisplay1 = ({ getDetails, setPageNumber }) => {
     })
 
     SetUpcomingMovies(movies)
-    console.log(movies, 'apkamin')
   }
 
   useEffect(() => {

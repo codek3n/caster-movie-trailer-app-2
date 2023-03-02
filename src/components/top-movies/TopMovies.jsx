@@ -18,7 +18,6 @@ const TopMovies = ({ setId, id }) => {
     })
 
     setTopMovies(movies)
-    console.log(movies, 'topMovies')
   }
 
   if (error) {

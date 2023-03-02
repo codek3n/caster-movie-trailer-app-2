@@ -23,8 +23,6 @@ const Search = ({ query, getDetails, pageNumber, setPageNumber }) => {
 
   useEffect(() => {
     setMovies(data)
-    console.log(data, 'bagong search')
-    console.log(totalPage)
 
     if (query.length === 0) {
       navigate('/')

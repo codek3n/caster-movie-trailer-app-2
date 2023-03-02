@@ -18,7 +18,6 @@ const UpcomingMovies = ({ getDetails, pageNumber, setPageNumber }) => {
 
   useEffect(() => {
     setUpcomingMovies(data)
-    console.log(data, 'upcoming')
 
     window.scrollTo({ top: 0 })
   }, [data])
