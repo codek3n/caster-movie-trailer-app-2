@@ -4,6 +4,8 @@ import SearchForm from '../search/SearchForm';
 import Hamburger from 'hamburger-react';
 import './navbar.scss';
 
+import casterLogo from '../../assets/images/caster-logo.png'
+
 
 const Navbar = ({ setQuery, pageNumber, setPageNumber }) => {
 
@@ -44,7 +46,8 @@ const Navbar = ({ setQuery, pageNumber, setPageNumber }) => {
           <div className={isTyping ? 'navbar__logo is-typing'
             : 'navbar__logo'}>
             <Link to='/' onClick={() => goTop()}>
-              Logo
+              {/* CASTER */}
+              <img src={casterLogo} alt="" className='logo' />
             </Link>
           </div>
 
