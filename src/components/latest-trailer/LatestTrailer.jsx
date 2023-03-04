@@ -74,7 +74,7 @@ const LatestTrailer = () => {
 
 
   return (
-    <div className='latest-trailer' id='#tailer-latest'>
+    <div className='latest-trailer' id='trailer-latest'>
 
       <div className='latest-trailer__container'>
         <h1 className="latest-trailer__header">Latest trailer</h1>

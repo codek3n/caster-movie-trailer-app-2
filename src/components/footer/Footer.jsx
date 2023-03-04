@@ -4,6 +4,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { FaTwitterSquare } from 'react-icons/fa';
 import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 import { Link, NavLink } from 'react-router-dom';
+import { HashLink as Linking } from 'react-router-hash-link';
 import './footer.scss';
 
 // import casterLogo from '../../assets/images/caster-logo.png';
@@ -53,9 +54,10 @@ const Footer = ({ setPageNumber }) => {
             </NavLink>
           </li>
           <li>
-            <Link to='/' onClick={() => goToLatestTrailer()}>
+            {/* <Link to='/' onClick={() => goToLatestTrailer()}> */}
+            <Linking to='/#trailer-latest'>
               Latest Trailer
-            </Link>
+            </Linking>
           </li>
         </ul>
 
