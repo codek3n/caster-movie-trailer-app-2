@@ -6,7 +6,8 @@ import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 import { Link, NavLink } from 'react-router-dom';
 import './footer.scss';
 
-import casterLogo from '../../assets/images/caster-logo.png';
+// import casterLogo from '../../assets/images/caster-logo.png';
+import logoCaster from '../../assets/images/caster-logo.png';
 
 
 const Footer = ({ setPageNumber }) => {
@@ -28,8 +29,7 @@ const Footer = ({ setPageNumber }) => {
     <div className='footer'>
       <div className='footer__container'>
         <div className='footer__logo'>
-          {/* <h3>LOGO</h3> */}
-          <img src={casterLogo} alt="" className='logo' />
+          <img src={logoCaster} alt="" className='logo' />
           <p>
             <AiOutlineCopyrightCircle />
             2023, Caster. All rights reserved
